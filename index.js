@@ -19,7 +19,19 @@ if (type === InteractionType.PING) {
     });
   } else {
 
+    if (data.member.user.id !== "890320875142930462"){
+      return res.send({
+        type: 4,
+        data: {
+          content: `Espere um minutinho..m você não é <@890320875142930462>! Sai daqui!`,
+          flags: 64
+        }
+      })
+    } else {
+
       require("./Interactions/index.js")(client, req.body, res, true);
+
+    }
   
   }
 })

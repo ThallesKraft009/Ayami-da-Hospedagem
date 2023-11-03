@@ -8,7 +8,7 @@ module.exports = {
     type: 1
   },
   run: async(client, i, res, DiscordRequest, Collector) => {
-
+//console.log(i)
 const options = {
   method: 'POST',
   headers: {
